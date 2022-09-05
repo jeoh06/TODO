@@ -1,0 +1,349 @@
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('./fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
+}
+
+$toggle-light: hsl(0, 0%, 98%);
+$toggle-dark: hsl(235, 24%, 19%);
+
+// Premade 
+%icon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+%field {
+  width: 22rem;
+  height: 2.8rem;
+  font-family: 'Josefin Sans';
+  font-size: 1rem;
+}
+
+%circle {
+  @extend %icon;
+  border: solid 1px;
+  border-radius: 50%;
+}
+
+// General Styles
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Josefin Sans';
+}
+
+ul {
+  list-style: none;
+}
+
+// App Styles
+main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+
+  header {
+    width: 100vw;
+    height: 13rem;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    letter-spacing: 0.5rem;
+    color: $toggle-light;
+
+    h2 {
+      margin: 3rem 0 0 1.8rem;
+    }
+
+    // Switch for lightmode/darkmode
+    #toggle {
+      .switch {
+        width: 2.5rem;
+        position: relative;
+        bottom: 4.5%;
+        margin: 3.5rem 1.8rem 0 0.5rem;
+        display: inline-block;
+
+        input {
+          visibility: hidden;
+        }
+
+        .slider {
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          transition: .4s;
+          border-radius: 2rem;
+          background-color: $toggle-dark;
+        }
+
+        .slider:before {
+          content: "";
+          width: 1.36rem;
+          height: 1.36rem;
+          position: absolute;
+          top: -2px;
+          transition: .4s;
+          border-radius: 50%;
+          background-color: $toggle-light;
+        }
+
+        input:checked+.slider {
+          background-color: $toggle-light;
+        }
+
+        input:checked+.slider:before {
+          transform: translateX(19px);
+          background-color: $toggle-dark;
+        }
+      }
+    }
+    @media only screen and (min-width: 760px) {
+      #toggle {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+  #coolTip {
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// Component Styles 
+#new-task,
+#task-list,
+#filters {
+  z-index: 100;
+}
+
+.check,
+.cross,
+.clear-all {
+  cursor: pointer;
+}
+
+//Input Styles
+#new-task {
+  position: relative;
+
+  span {
+    @extend %circle;
+    margin-top: 7.65rem;
+    position: absolute;
+    left: 2.5rem;
+  }
+
+  #todo {
+    @extend %field;
+    margin: 7rem 1.25rem 0 1.25rem;
+    border: none;
+    border-radius: 5px;
+    text-indent: 3.5rem;
+  }
+
+  @media only screen and (min-width: 420px) and (max-width: 540px) {
+    #todo {
+      width: 25rem;
+    }
+  }
+  @media only screen and (min-width: 540px) and (max-width: 760px) {
+    #todo {
+      width: 30rem;
+    }
+  }
+  @media only screen and (min-width: 760px) {
+    #todo {
+      width: 40rem;
+    }
+  }
+
+
+  #todo:focus {
+    outline: none;
+  }
+
+  .dark::placeholder {
+    color: hsl(234, 11%, 52%);
+  }
+
+  .light::placeholder {
+    color: hsl(236, 9%, 61%);
+  }
+}
+
+// Todo Styles 
+#task-list {
+  margin-top: 1rem;
+  position: relative;
+
+  li {
+    margin: 0 1.25rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  li:first-child {
+    border-radius: 5px 5px 0 0;
+  }
+
+  // Tasks
+  #tasks {
+    max-height: 20.0375rem;
+    overflow-y: scroll;
+
+    .to-do {
+      @extend %field;
+      border-bottom: 1px solid;
+
+      .task {
+        margin-left: 3.5rem;
+
+        .check {
+          @extend %circle;
+          position: absolute;
+          left: 1.2rem;
+
+          img {
+            padding: 0.3125rem 0 0 0.3125rem;
+          }
+        }
+      }
+
+      .cross {
+        @extend %icon;
+        margin: 0.5rem 1.2rem 0 0;
+      }
+
+      .time-stamp {
+        position: absolute;
+        bottom: 0;
+        left: 3.5rem;
+        font-size: 12px;
+      }
+    }
+
+    @media only screen and (min-width: 420px) and (max-width: 540px) {
+      .to-do {
+        width: 25rem;
+      }
+    }
+    @media only screen and (min-width: 540px) and (max-width: 760px) {
+      .to-do {
+        width: 30rem;
+      }
+    }
+    @media only screen and (min-width: 760px) {
+      .to-do {
+        width: 40rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 540px) and (max-width: 760px) {
+    #tasks {
+      max-height: 22.9rem;
+    }
+  }
+
+  @media only screen and (min-width: 760px) {
+    #tasks {
+      max-height: 40.075rem;
+    }
+  }
+
+  .reset {
+    @extend %field;
+    border-radius: 0 0 5px 5px;
+
+    span {
+      margin-left: 0.5rem;
+    }
+
+    label {
+      margin-right: 0.5rem;
+    }
+
+    #clear {
+      visibility: hidden;
+    }
+  }
+
+  @media only screen and (min-width: 420px) and (max-width: 540px) {
+    .reset {
+      width: 25rem;
+    }
+  }
+  @media only screen and (min-width: 540px) and (max-width: 760px) {
+    .reset {
+      width: 30rem;
+    }
+  }
+  @media only screen and (min-width: 760px) {
+    .reset {
+      width: 40rem;
+    }
+  }
+}
+
+#filters {
+  @extend %field;
+  margin: 1rem 1.25rem 0 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+
+  label>input[type=radio] {
+    margin-right: 1rem;
+    visibility: hidden;
+  }
+
+  label>span {
+    cursor: pointer;
+  }
+
+  input[type=radio]:checked+span {
+    color: hsl(220, 98%, 61%);
+  }
+}
+
+@media only screen and (min-width: 420px) and (max-width: 540px) {
+  #filters {
+    width: 25rem;
+  }
+}
+@media only screen and (min-width: 540px) and (max-width: 760px) {
+  #filters {
+    width: 30rem;
+  }
+}
+@media only screen and (min-width: 760px) { 
+  #filters {
+    width: 20rem;
+    margin: 0;
+  }
+}
