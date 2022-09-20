@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/jeoh06/TODO.git/static/css/main.6f8d6491.css",
-    "main.js": "/jeoh06/TODO.git/static/js/main.f670ebc6.js",
-    "static/js/787.f1fc2538.chunk.js": "/jeoh06/TODO.git/static/js/787.f1fc2538.chunk.js",
-    "static/media/JosefinSans-VariableFont_wght.ttf": "/jeoh06/TODO.git/static/media/JosefinSans-VariableFont_wght.1bfcfba29eda50476f98.ttf",
-    "static/media/bg-desktop-light.jpg": "/jeoh06/TODO.git/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
-    "static/media/bg-desktop-dark.jpg": "/jeoh06/TODO.git/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
-    "static/media/icon-sun.svg": "/jeoh06/TODO.git/static/media/icon-sun.910b1f9a23741afc341e95653a51f14f.svg",
-    "index.html": "/jeoh06/TODO.git/index.html",
-    "static/media/icon-moon.svg": "/jeoh06/TODO.git/static/media/icon-moon.6c03114b495d05f4380b3c544d9afe2a.svg",
-    "static/media/icon-cross.svg": "/jeoh06/TODO.git/static/media/icon-cross.6ee81d30b75cab19d6f7314624fcc4d6.svg",
-    "static/media/icon-check.svg": "/jeoh06/TODO.git/static/media/icon-check.a8fb15d0278c8e312df5fc8364fef863.svg",
-    "main.6f8d6491.css.map": "/jeoh06/TODO.git/static/css/main.6f8d6491.css.map",
-    "main.f670ebc6.js.map": "/jeoh06/TODO.git/static/js/main.f670ebc6.js.map",
-    "787.f1fc2538.chunk.js.map": "/jeoh06/TODO.git/static/js/787.f1fc2538.chunk.js.map"
+    "main.css": "/TODO/static/css/main.b1fa7940.css",
+    "main.js": "/TODO/static/js/main.9ad50bcf.js",
+    "static/js/787.f1fc2538.chunk.js": "/TODO/static/js/787.f1fc2538.chunk.js",
+    "static/media/JosefinSans-VariableFont_wght.ttf": "/TODO/static/media/JosefinSans-VariableFont_wght.1bfcfba29eda50476f98.ttf",
+    "static/media/bg-desktop-light.jpg": "/TODO/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
+    "static/media/bg-desktop-dark.jpg": "/TODO/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
+    "static/media/icon-sun.svg": "/TODO/static/media/icon-sun.910b1f9a23741afc341e95653a51f14f.svg",
+    "index.html": "/TODO/index.html",
+    "static/media/icon-moon.svg": "/TODO/static/media/icon-moon.6c03114b495d05f4380b3c544d9afe2a.svg",
+    "static/media/icon-cross.svg": "/TODO/static/media/icon-cross.6ee81d30b75cab19d6f7314624fcc4d6.svg",
+    "static/media/icon-check.svg": "/TODO/static/media/icon-check.a8fb15d0278c8e312df5fc8364fef863.svg",
+    "main.b1fa7940.css.map": "/TODO/static/css/main.b1fa7940.css.map",
+    "main.9ad50bcf.js.map": "/TODO/static/js/main.9ad50bcf.js.map",
+    "787.f1fc2538.chunk.js.map": "/TODO/static/js/787.f1fc2538.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f8d6491.css",
-    "static/js/main.f670ebc6.js"
+    "static/css/main.b1fa7940.css",
+    "static/js/main.9ad50bcf.js"
   ]
 }
