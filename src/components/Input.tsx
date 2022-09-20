@@ -21,7 +21,7 @@ const Input = (props: Inherit) => {
     // Formats time into A.M./P.M. using % 12 and also checks if min is a single digit value and adds a 0 in front if so
     time = `${hour % 12 ? hour % 12 : 12}:${min > 9 ? min : '0' + min} ${hour >= 12 && hour != 24 ? 'P.M.' : 'A.M.'}`;
 
-    const [newTask, setNewTask] = useState('');
+    const [newTask, setNewTask] = useState('');  
     // Updates state to hold latest input value from user 
     const trackInput = (e: React.ChangeEvent) => {
         let value = (e.target as HTMLInputElement).value;
